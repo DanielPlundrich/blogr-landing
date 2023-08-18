@@ -1,7 +1,170 @@
+@import "variables";
+@import "mixins";
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 375px;
+    margin: auto;
+}
+header{
+    background: url(/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, $gradient-header-color-1, $gradient-header-color-2);
+    border-radius: 0px 0px 0px 100px;
+    background-repeat: no-repeat;
+    background-position: 40% 30%;
+    height: 600px;
+    padding: $global-side-gap;
+    margin-bottom: $margin-bottom-1;
+}
+
+
+header > div{
+    display: flex;
+    justify-content: space-between;
+    padding-top: $top-header-gap;
+
+}
+
+header div > img {
+    height: 25px;
+}
+
+nav{
+    display: none;
+    position: absolute;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    font-family:'Overpass';
+    
+}
+
+.header-content div h1{
+    font-size: 2rem;
+    color: $light-font-color;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.header-content div p{
+    color: $light-font-color;
+    margin-bottom: 50px;
+}
+
+.header-content div a{
+    color: $light-font-color;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 15px 20px;
+    font-weight: 600;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-family: 'Ubuntu';
+}
+
+.header-content div a:first-child{
+    background-color: white;
+    color: $first-color;
+}
+
+.header-content div a:last-child{
+    border: 3px solid white;
+}
+
+
+main{
+    text-align: center;
+}
+main .segment-1 div img{
+    width: 100% ;
+
+}
+
+main .segment-3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+main .segment-3 img{
+    width: 130%;
+    margin-bottom: $margin-bottom-2;
+
+}
+
+
+main .segment-1 div:nth-child(2),
+main .segment-1 div:nth-child(3),
+main .segment-3 div{
+    margin: $global-side-gap;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: $margin-bottom-2;
+}
+
+main .segment-1 div:nth-child(3) p{
+    padding-bottom: 160px
+}
+
+main section div h2{
+    @include main-style-h2;
+    margin-bottom: $margin-bottom-3;
+}
+
+main section div h3{
+    @include main-style-h3;
+    margin-bottom: $margin-bottom-3;
+}
+
+main section div p{
+    @include main-style-paragraph
+}
+
+main section{
+    margin-bottom: $margin-bottom-1;
+}
+
+main section div{
+    margin-bottom: $margin-bottom-2;
+}
+
+main .segment-2{
+    background-color: $fifth-color;
+    border-radius: 0px 100px 0px 100px;
+    padding: $global-side-gap;
+    background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1, $gradient-main-color-2);
+    background-position: 50% 115%;
+    background-size: cover;
+    height: 560px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 160px;
+}
+
+main .segment-2 div h2{
+    margin-bottom: $margin-bottom-3;
+}
+main .segment-2 div h2,
+main .segment-2 div p{
+    color: $light-font-color;
+}
+
+main .segment-2 img{
+   position: absolute;
+    top: -180px;
+    left: 0%;
+    width: 100%;
+}
+
 
 

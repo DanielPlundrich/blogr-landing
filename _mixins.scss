@@ -1,0 +1,17 @@
+@mixin main-style-h3{
+    color: $third-color;
+    font-family: 'Overpass';
+    font-size: 1.5rem;
+}
+
+
+@mixin main-style-h2{
+    color: $third-color;
+    font-family: 'Overpass';
+    font-size: 2rem;
+}
+
+@mixin main-style-paragraph{
+    color: $third-color;
+    font-family: 'Overpass';
+}

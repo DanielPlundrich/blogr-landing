@@ -2,4 +2,165 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  width: 375px;
+  margin: auto;
+}
+
+header {
+  background: url(/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  border-radius: 0px 0px 0px 100px;
+  background-repeat: no-repeat;
+  background-position: 40% 30%;
+  height: 600px;
+  padding: 0 35px;
+  margin-bottom: 60px;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+header div > img {
+  height: 25px;
+}
+
+nav {
+  display: none;
+  position: absolute;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  font-family: "Overpass";
+}
+
+.header-content div h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.header-content div p {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.header-content div a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  padding: 15px 20px;
+  font-weight: 600;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-family: "Ubuntu";
+}
+
+.header-content div a:first-child {
+  background-color: white;
+  color: hsl(356, 100%, 66%);
+}
+
+.header-content div a:last-child {
+  border: 3px solid white;
+}
+
+main {
+  text-align: center;
+}
+
+main .segment-1 div img {
+  width: 100%;
+}
+
+main .segment-3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .segment-3 img {
+  width: 130%;
+  margin-bottom: 30px;
+}
+
+main .segment-1 div:nth-child(2),
+main .segment-1 div:nth-child(3),
+main .segment-3 div {
+  margin: 0 35px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+main .segment-1 div:nth-child(3) p {
+  padding-bottom: 160px;
+}
+
+main section div h2 {
+  color: hsl(208, 49%, 24%);
+  font-family: "Overpass";
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+main section div h3 {
+  color: hsl(208, 49%, 24%);
+  font-family: "Overpass";
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+main section div p {
+  color: hsl(208, 49%, 24%);
+  font-family: "Overpass";
+}
+
+main section {
+  margin-bottom: 60px;
+}
+
+main section div {
+  margin-bottom: 30px;
+}
+
+main .segment-2 {
+  background-color: hsl(237, 17%, 21%);
+  border-radius: 0px 100px 0px 100px;
+  padding: 0 35px;
+  background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-position: 50% 115%;
+  background-size: cover;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 160px;
+}
+
+main .segment-2 div h2 {
+  margin-bottom: 15px;
+}
+
+main .segment-2 div h2,
+main .segment-2 div p {
+  color: white;
+}
+
+main .segment-2 img {
+  position: absolute;
+  top: -180px;
+  left: 0%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -6,7 +6,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | [Blogr]</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,8 +18,11 @@
 </head>
 <body>
   <header>
-    <a href=""><img src="images/logo.svg" alt=""></a>
-    <nav>
+    <div>
+      <a href=""><img src="images/logo.svg" alt=""></a>
+      <img src="/images/icon-hamburger.svg" alt="" onclick="toggleMenu()">
+    </div>
+    <nav class="menu">
       <div>
         <a href="">Product</a>
         <ul>
@@ -48,29 +53,30 @@
        </ul>
      </div>
 
-     <div>
-       <a href="">Login</a>
-       <a href="">Sign Up</a>
-     </div>
+      <div>
+        <a href="">Login</a>
+        <a href="">Sign Up</a>
+      </div>
     </nav>
+    <div class="header-content">
+        <div>
+          <h1>A modern publishing platform</h1>
+          <p>Grow your audience and build your online brand</p>
+        </div>
 
-    <div>
-      <div>
-        <h1>A modern publishing platform</h1>
-        <p>Grow your audience and build your online brand</p>
-      </div>
-
-      <div>
-        <a href="">Start for Free</a>
-        <a href="">Learn More</a>
-      </div>
+        <div>
+          <a href="">Start for Free</a>
+          <a href="">Learn More</a>
+        </div>
     </div>
+
+
   </header>
 
   <main>
-    <section>
+    <section class="segment-1">
       <div>
-        <h2>Designed for the future</h2>
+        <h3>Designed for the future</h3>
         <img src="images/illustration-editor-mobile.svg" alt="">
       </div>
       <div>
@@ -91,7 +97,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="segment-2">
       <img src="/images/illustration-phones.svg" alt="">
       <div>
         <h2>State of the Art Infrastructure</h2>
@@ -102,10 +108,10 @@
       </div>
     </section>
 
-    <section>
+    <section class="segment-3">
       <img src="/images/illustration-laptop-mobile.svg" alt="">
       <div>
-        <h2>Free, open, simple</h2>
+        <h3>Free, open, simple</h3>
         <p>
           Blogr is a free and open source application backed by a large community of helpful developers. It supports 
           features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
@@ -113,7 +119,7 @@
         </p>
       </div>
       <div>
-        <h2>Powerful tooling</h2>
+        <h3>Powerful tooling</h3>
         <p>
           Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
           capable of producing even the most complicated sites.
@@ -159,5 +165,6 @@
     Coded by <a href="#">Daniel Plundrich</a>.
   </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
