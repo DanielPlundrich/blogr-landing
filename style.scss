@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixins";
 
-
 *{
     margin: 0;
     padding: 0;
@@ -51,7 +50,7 @@ nav{
 .header-content div h1{
     font-size: 2rem;
     color: $light-font-color;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
@@ -75,11 +74,19 @@ nav{
     background-color: white;
     color: $first-color;
 }
+.header-content div a:first-child:active{
+    background-color: $second-color;
+    color: white;
+}
 
 .header-content div a:last-child{
     border: 3px solid white;
 }
 
+.header-content div a:last-child:active{
+    background-color: white;
+    color: $second-color;
+}
 
 main{
     text-align: center;
@@ -161,10 +168,42 @@ main .segment-2 div p{
 
 main .segment-2 img{
    position: absolute;
-    top: -180px;
-    left: 0%;
-    width: 100%;
+   transform: translateX(-50%);
+   left: 50%;
+   width: 100%;
+   top: -180px;
 }
 
+footer {
+    background-color: $sixth-color;
+    border-radius: 0px 100px 0px 0px;
+    text-align: center;
+    padding-top: 60px;
+}
+footer a img {
+    margin-bottom: 20px;
+}
+footer div ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    
+}
+footer div h4 {
+    @include footer-style-h4
+}
+
+
+footer div ul li a{
+    @include footer-style-menu;
+}
+
+footer div ul li a:active{
+    text-decoration: underline;
+}
+.attribution,
+.attribution a {
+    color: white;
+    padding: 25px 0;
+}
 
 

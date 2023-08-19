@@ -12,6 +12,21 @@
 }
 
 @mixin main-style-paragraph{
-    color: $third-color;
+    color: $fourth-color;
     font-family: 'Overpass';
+}
+
+@mixin footer-style-h4{
+    color: white;
+    font-family: 'Ubuntu';
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-weight: 500
+}
+
+@mixin footer-style-menu{
+    color: $seventh-color;
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    
 }

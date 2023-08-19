@@ -46,7 +46,7 @@ nav {
 .header-content div h1 {
   font-size: 2rem;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 600;
 }
 
@@ -71,8 +71,18 @@ nav {
   color: hsl(356, 100%, 66%);
 }
 
+.header-content div a:first-child:active {
+  background-color: hsl(355, 100%, 74%);
+  color: white;
+}
+
 .header-content div a:last-child {
   border: 3px solid white;
+}
+
+.header-content div a:last-child:active {
+  background-color: white;
+  color: hsl(355, 100%, 74%);
 }
 
 main {
@@ -123,7 +133,7 @@ main section div h3 {
 }
 
 main section div p {
-  color: hsl(208, 49%, 24%);
+  color: hsl(207, 13%, 34%);
   font-family: "Overpass";
 }
 
@@ -160,7 +170,48 @@ main .segment-2 div p {
 
 main .segment-2 img {
   position: absolute;
-  top: -180px;
-  left: 0%;
+  transform: translateX(-50%);
+  left: 50%;
   width: 100%;
+  top: -180px;
+}
+
+footer {
+  background-color: hsl(240, 10%, 16%);
+  border-radius: 0px 100px 0px 0px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+footer a img {
+  margin-bottom: 20px;
+}
+
+footer div ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer div h4 {
+  color: white;
+  font-family: "Ubuntu";
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+footer div ul li a {
+  color: hsl(240, 2%, 79%);
+  font-family: "Ubuntu";
+  text-decoration: none;
+}
+
+footer div ul li a:active {
+  text-decoration: underline;
+}
+
+.attribution,
+.attribution a {
+  color: white;
+  padding: 25px 0;
 }/*# sourceMappingURL=style.css.map */
