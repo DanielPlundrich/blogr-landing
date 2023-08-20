@@ -18,14 +18,17 @@
 </head>
 <body>
   <header>
-    <div>
+    <div >
       <a href=""><img src="images/logo.svg" alt=""></a>
-      <img src="/images/icon-hamburger.svg" alt="" onclick="toggleMenu()">
+      <div class="menu-toggle">
+        <img src="/images/icon-hamburger.svg" alt="" class="hamburger-icon">
+        <img src="/images/icon-close.svg" alt="" class="close-icon">
+      </div>
     </div>
     <nav class="menu">
       <div>
-        <a href="">Product</a>
-        <ul>
+        <a href="#" onclick="productOptions()">Product<img src="/images/icon-arrow-dark.svg" alt=""></a>
+        <ul class="productOptions">
           <li><a href="">Overview</a></li>
           <li><a href="">Pricing</a></li>
           <li><a href="">Marketplace</a></li>
@@ -35,27 +38,27 @@
      </div>
 
      <div>
-       <a href="">Company</a>
-       <ul>
-         <li><a href="">About</a></li>
-         <li><a href="">Team</a></li>
-         <li><a href="">Blog</a></li>
-         <li><a href="">Careers</a></li>
-       </ul>
+        <a href="#" onclick="companyOptions()">Company<img src="/images/icon-arrow-dark.svg" alt=""></a>
+        <ul class="companyOptions">
+          <li><a href="">About</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Careers</a></li>
+        </ul>
      </div>
 
      <div>
-       <a href="">Connect</a>
-       <ul>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Newsletter</a></li>
-        <li><a href="">LinkedIn</a></li>
+        <a href="#" onclick="connectOptions()">Connect<img src="/images/icon-arrow-dark.svg" alt=""></a>
+        <ul class="connectOptions">
+          <li><a href="">Contact</a></li>
+          <li><a href="">Newsletter</a></li>
+          <li><a href="">LinkedIn</a></li>
        </ul>
      </div>
 
       <div>
-        <a href="">Login</a>
-        <a href="">Sign Up</a>
+        <a href="#">Login</a>
+        <a href="#">Sign Up</a>
       </div>
     </nav>
     <div class="header-content">

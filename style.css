@@ -17,21 +17,122 @@ header {
   height: 600px;
   padding: 0 35px;
   margin-bottom: 60px;
+  padding-top: 50px;
 }
 
 header > div {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
 }
 
 header div > img {
   height: 25px;
+  cursor: pointer;
 }
 
-nav {
+.menu-toggle {
+  align-items: center;
+  display: flex;
+}
+
+header .close-icon {
+  display: none;
+}
+
+.menu {
   display: none;
   position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: white;
+  width: 305px;
+  border-radius: 5px;
+  margin-top: 25px;
+  box-shadow: 0px 50px 60px rgba(0, 0, 0, 0.3);
+}
+
+.menu div > a {
+  font-family: "Overpass";
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+}
+
+.menu div > a:focus {
+  color: hsl(207, 13%, 34%);
+}
+
+.menu div ul li {
+  list-style: none;
+}
+
+.menu div ul li a {
+  font-family: "Overpass";
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(207, 13%, 34%);
+}
+
+.menu div {
+  margin-bottom: 20px;
+  margin: 25px;
+}
+
+.menu div a img {
+  height: 6px;
+  margin-left: 4px;
+}
+
+.productOptions,
+.companyOptions,
+.connectOptions {
+  display: none;
+  background-color: rgba(168, 168, 168, 0.195);
+  margin: 0 auto;
+  width: 260px;
+  border-radius: 5px;
+}
+
+.menu div:nth-child(3) {
+  border-bottom: 2px solid rgba(168, 168, 168, 0.195);
+  padding-bottom: 30px;
+}
+
+.productOptions li,
+.companyOptions li,
+.connectOptions li {
+  padding: 10px 0;
+}
+
+.productOptions li:first-child,
+.companyOptions li:first-child,
+.connectOptions li:first-child {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.productOptions li:last-child,
+.companyOptions li:last-child,
+.connectOptions li:last-child {
+  padding-bottom: 20px;
+}
+
+.menu div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu div:last-child a {
+  margin: 0px auto;
+  width: 130px;
+  padding: 15px 0px;
+}
+
+.menu div:last-child a:last-child {
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%)) !important;
+  border-radius: 100px;
+  color: white;
 }
 
 .header-content {
@@ -59,11 +160,12 @@ nav {
   color: white;
   text-decoration: none;
   margin: 0 5px;
-  padding: 15px 20px;
+  padding: 15px 15px;
   font-weight: 600;
   border-radius: 40px;
   font-size: 1rem;
   font-family: "Ubuntu";
+  border: 3px solid white;
 }
 
 .header-content div a:first-child {
@@ -74,10 +176,6 @@ nav {
 .header-content div a:first-child:active {
   background-color: hsl(355, 100%, 74%);
   color: white;
-}
-
-.header-content div a:last-child {
-  border: 3px solid white;
 }
 
 .header-content div a:last-child:active {
