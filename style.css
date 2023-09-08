@@ -19,23 +19,18 @@ header {
   margin-bottom: 60px;
   padding-top: 50px;
 }
-
-header > div {
+header .close-icon {
+  display: none;
+}
+header .navbar > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
 header div > img {
-  height: 25px;
   cursor: pointer;
 }
-
-.menu-toggle {
-  align-items: center;
-  display: flex;
-}
-
-header .close-icon {
+header div .arrow-light {
   display: none;
 }
 
@@ -46,31 +41,31 @@ header .close-icon {
   transform: translateX(-50%);
   left: 50%;
   background-color: white;
-  width: 305px;
   border-radius: 5px;
-  margin-top: 25px;
+  margin-top: 20px;
   box-shadow: 0px 50px 60px rgba(0, 0, 0, 0.3);
+  width: 305px;
 }
-
+.menu div ul li {
+  list-style: none;
+}
+.menu div ul li a {
+  font-family: "Overpass";
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(207, 13%, 34%);
+}
+.menu .menu-toggle {
+  align-items: center;
+  display: flex;
+}
 .menu div > a {
   font-family: "Overpass";
   text-decoration: none;
   font-weight: 600;
   color: hsl(208, 49%, 24%);
 }
-
 .menu div > a:focus {
-  color: hsl(207, 13%, 34%);
-}
-
-.menu div ul li {
-  list-style: none;
-}
-
-.menu div ul li a {
-  font-family: "Overpass";
-  text-decoration: none;
-  font-weight: 600;
   color: hsl(207, 13%, 34%);
 }
 
@@ -187,10 +182,6 @@ main {
   text-align: center;
 }
 
-main .segment-1 div img {
-  width: 100%;
-}
-
 main .segment-3 {
   display: flex;
   align-items: center;
@@ -200,6 +191,16 @@ main .segment-3 {
 main .segment-3 img {
   width: 130%;
   margin-bottom: 30px;
+}
+
+main .segment-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+
+main .segment-1 div:nth-child(2) img {
+  margin: 0 auto;
 }
 
 main .segment-1 div:nth-child(2),
@@ -212,8 +213,8 @@ main .segment-3 div {
   margin-bottom: 30px;
 }
 
-main .segment-1 div:nth-child(3) p {
-  padding-bottom: 160px;
+main .segment-1 div:nth-child(4) p {
+  padding-bottom: 180px;
 }
 
 main section div h2 {
@@ -223,7 +224,8 @@ main section div h2 {
   margin-bottom: 15px;
 }
 
-main section div h3 {
+main section div h3,
+main section h3 {
   color: hsl(208, 49%, 24%);
   font-family: "Overpass";
   font-size: 1.5rem;
@@ -233,6 +235,7 @@ main section div h3 {
 main section div p {
   color: hsl(207, 13%, 34%);
   font-family: "Overpass";
+  line-height: 27px;
 }
 
 main section {
@@ -243,18 +246,29 @@ main section div {
   margin-bottom: 30px;
 }
 
+.invisible-none {
+  display: none;
+}
+
+main .segment .desktop {
+  display: none;
+}
+
 main .segment-2 {
   background-color: hsl(237, 17%, 21%);
   border-radius: 0px 100px 0px 100px;
   padding: 0 35px;
-  background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-  background-position: 50% 115%;
+  background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
+  background-color: hsl(237, 23%, 32%);
+  background-position-x: 50%;
+  background-position-y: -230px;
   background-size: cover;
-  height: 560px;
+  background-repeat: no-repeat;
+  height: 590px;
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: 160px;
+  padding-top: 145px;
 }
 
 main .segment-2 div h2 {
@@ -264,6 +278,10 @@ main .segment-2 div h2 {
 main .segment-2 div h2,
 main .segment-2 div p {
   color: white;
+}
+
+main .segment-2 div p {
+  line-height: 27px;
 }
 
 main .segment-2 img {
@@ -312,4 +330,198 @@ footer div ul li a:active {
 .attribution a {
   color: white;
   padding: 25px 0;
+}
+
+@media only screen and (min-width: 940px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  header {
+    background: url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-radius: 0px 0px 0px 100px;
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    height: 100vh;
+    margin-bottom: 60px;
+    padding-top: 0;
+    padding: 0 100px;
+  }
+  .navbar {
+    display: flex;
+    position: static;
+    margin: 0;
+    justify-content: space-between;
+    padding-top: 35px;
+    align-items: center;
+  }
+  header .navbar > div {
+    display: block;
+  }
+  .menu div:nth-child(1) > a,
+  .menu div:nth-child(2) > a,
+  .menu div:nth-child(3) > a,
+  .navbar nav div:nth-child(1) img,
+  .navbar nav div:nth-child(2) img,
+  .navbar nav div:nth-child(3) img,
+  .productOptions,
+  .companyOptions,
+  .connectOptions {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    right: calc(100vw - 950px);
+    padding-left: 35px;
+  }
+  .navbar nav div:nth-child(1) img,
+  .navbar nav div:nth-child(2) img,
+  .navbar nav div:nth-child(3) img {
+    padding-left: 10px;
+    color: white !important;
+  }
+  .menu div:nth-child(3) {
+    border: 0;
+  }
+  .menu {
+    display: flex;
+    background-color: transparent;
+    box-shadow: 0 0 0;
+    position: static;
+    transform: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 620px;
+  }
+  .menu div > div {
+    flex-direction: row;
+  }
+  .menu div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu div:last-child {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu div:last-child a {
+    padding: 10px 20px;
+  }
+  .menu div:last-child a:last-child {
+    color: hsl(356, 100%, 66%);
+    background: white !important;
+  }
+  .menu div {
+    margin: 0;
+    padding: 0 !important;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .menu div > a {
+    color: white;
+  }
+  .menu div > a:active {
+    text-decoration: underline;
+  }
+  .menu div ul li a {
+    font-weight: 500;
+  }
+  .menu div ul li a:active {
+    font-weight: bolder;
+    color: black;
+  }
+  .menu div a img {
+    padding-left: 20px;
+  }
+  .productOptions,
+  .companyOptions,
+  .connectOptions {
+    padding: 20px 20px;
+    background-color: white;
+    position: absolute;
+    width: 150px;
+  }
+  .menu div ul li {
+    text-align: left;
+  }
+  .productOptions li:first-child,
+  .companyOptions li:first-child,
+  .connectOptions li:first-child {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .productOptions li:last-child,
+  .companyOptions li:last-child,
+  .connectOptions li:last-child {
+    padding-bottom: 0;
+  }
+  .productOptions,
+  .companyOptions,
+  .connectOptions {
+    top: 80px;
+  }
+  .productOptions {
+    transform: translateX(-550px);
+  }
+  .companyOptions {
+    transform: translateX(-435px);
+  }
+  .connectOptions {
+    transform: translateX(-310px);
+  }
+  main .segment-1 div:nth-child(4) p {
+    padding: 0px !important;
+  }
+  header div .arrow-dark {
+    display: none;
+  }
+  header div .arrow-light {
+    display: block;
+  }
+  .menu div a:focus {
+    color: white;
+  }
+  main .segment .desktop {
+    display: block;
+  }
+  main .segment .mobile {
+    display: none !important;
+  }
+  .segment-1 {
+    display: grid !important;
+    margin-bottom: 500px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 150px 250px 250px;
+    text-align: left;
+    grid-template-areas: "heading heading" "paragraph1 img" "paragraph2 img";
+  }
+  .segment-1 div:nth-child(1) {
+    grid-area: heading;
+    text-align: center !important;
+    width: 100vw;
+  }
+  .segment-1 div:nth-child(2) {
+    grid-area: img;
+  }
+  .segment-1 div:nth-child(2) img {
+    width: 175%;
+    padding-right: 100px;
+  }
+  .segment-1 div:nth-child(3) {
+    grid-area: paragraph1;
+    margin-left: 100px !important;
+    margin: 0;
+  }
+  .segment-1 div:nth-child(4) {
+    grid-area: paragraph2;
+    margin-left: 100px;
+  }
+  main .segment-1 div:nth-child(4) p {
+    padding: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */

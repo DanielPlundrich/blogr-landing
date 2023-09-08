@@ -18,49 +18,71 @@
 </head>
 <body>
   <header>
-    <div >
-      <a href=""><img src="images/logo.svg" alt=""></a>
-      <div class="menu-toggle">
-        <img src="/images/icon-hamburger.svg" alt="" class="hamburger-icon">
-        <img src="/images/icon-close.svg" alt="" class="close-icon">
-      </div>
-    </div>
-    <nav class="menu">
+    <div class="navbar">
       <div>
-        <a href="#" onclick="productOptions()">Product<img src="/images/icon-arrow-dark.svg" alt=""></a>
-        <ul class="productOptions">
-          <li><a href="">Overview</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Marketplace</a></li>
-          <li><a href="">Features</a></li>
-          <li><a href="">Integrations</a></li>
-        </ul>
-     </div>
+        <a href=""><img src="images/logo.svg" alt=""></a>
+        <div class="menu-toggle">
+          <img src="/images/icon-hamburger.svg" alt="" class="hamburger-icon">
+          <img src="/images/icon-close.svg" alt="" class="close-icon">
+        </div>
+      </div>
+      <nav class="menu">
+        <div>
+          <div>
+            <a href="#" onclick="productOptions()">Product</a>
+            <img src="/images/icon-arrow-dark.svg" alt="" class="arrow-dark">
+            <img src="/images/icon-arrow-light.svg" alt="" class="arrow-light">
+          </div>
+          <ul class="productOptions">
+            <li><a href="">Overview</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Marketplace</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Integrations</a></li>
+          </ul>
+       </div>
 
-     <div>
-        <a href="#" onclick="companyOptions()">Company<img src="/images/icon-arrow-dark.svg" alt=""></a>
-        <ul class="companyOptions">
-          <li><a href="">About</a></li>
-          <li><a href="">Team</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Careers</a></li>
-        </ul>
-     </div>
+       <div>
+          <div>
+            <a href="#" onclick="companyOptions()">Company</a>
+            <img src="/images/icon-arrow-dark.svg" alt="" class="arrow-dark">
+            <img src="/images/icon-arrow-light.svg" alt="" class="arrow-light">
+          </div>
+          <ul class="companyOptions">
+            <li><a href="">About</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
+       </div>
+  
+       <div>
+          <div>
+            <a href="#" onclick="connectOptions()">Connect</a>
+            <img src="/images/icon-arrow-dark.svg" alt="" class="arrow-dark">
+            <img src="/images/icon-arrow-light.svg" alt="" class="arrow-light">
+          </div>
+          <ul class="connectOptions">
+            <li><a href="">Contact</a></li>
+            <li><a href="">Newsletter</a></li>
+            <li><a href="">LinkedIn</a></li>
+         </ul>
+       </div>
 
-     <div>
-        <a href="#" onclick="connectOptions()">Connect<img src="/images/icon-arrow-dark.svg" alt=""></a>
-        <ul class="connectOptions">
-          <li><a href="">Contact</a></li>
-          <li><a href="">Newsletter</a></li>
-          <li><a href="">LinkedIn</a></li>
-       </ul>
-     </div>
+       
 
       <div>
         <a href="#">Login</a>
         <a href="#">Sign Up</a>
       </div>
-    </nav>
+
+      </nav>
+
+      
+    </div>
+
+    
+    
     <div class="header-content">
         <div>
           <h1>A modern publishing platform</h1>
@@ -77,10 +99,13 @@
   </header>
 
   <main>
-    <section class="segment-1">
+    <section class="segment-1 segment">
       <div>
         <h3>Designed for the future</h3>
-        <img src="images/illustration-editor-mobile.svg" alt="">
+      </div>
+      <div>
+        <img src="images/illustration-editor-mobile.svg" alt="" class="mobile">
+        <img src="images/illustration-editor-desktop.svg" alt="" class="desktop">
       </div>
       <div>
         <h3>Introducing an extensible editor</h3>
@@ -100,24 +125,25 @@
       </div>
     </section>
 
-    <section class="segment-2">
+    <section class="segment-2 segment">
       <img src="/images/illustration-phones.svg" alt="">
       <div>
         <h2>State of the Art Infrastructure</h2>
         <p>
-          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
           This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
         </p>
       </div>
     </section>
 
-    <section class="segment-3">
-      <img src="/images/illustration-laptop-mobile.svg" alt="">
+    <section class="segment-3 segment">
+      <img src="/images/illustration-laptop-mobile.svg" alt="" class="mobile">
+      <img src="/images/illustration-laptop-desktop.svg" alt="" class="desktop">
       <div>
         <h3>Free, open, simple</h3>
         <p>
-          Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          Blogr is a free and open source application backed by a large community of helpful developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
           and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
         </p>
       </div>

@@ -19,27 +19,23 @@ header{
     padding: $global-side-gap;
     margin-bottom: $margin-bottom-1;
     padding-top: $top-header-gap;
-}
 
+    .close-icon{
+        display: none;
+    }
 
-header > div{
-    display: flex;
-    justify-content: space-between;
-}
+    .navbar > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-header div > img {
-    height: 25px;
-    cursor: pointer;
-}
-
-
-.menu-toggle {
-    align-items: center;
-    display: flex;
-}
-
-header .close-icon{
-    display: none;
+    div > img {
+        cursor: pointer;
+    }
+    div .arrow-light{
+        display: none;
+    }
 }
 
 .menu{
@@ -49,28 +45,40 @@ header .close-icon{
     transform: translateX(-50%);
     left: 50%;
     background-color: white;
-    width: 305px;
     border-radius: 5px;
-    margin-top: 25px;
-    box-shadow: 0px 50px 60px rgba(0, 0, 0, 0.3)
+    margin-top: 20px;
+    box-shadow: 0px 50px 60px rgba(0, 0, 0, 0.3);
+    width: 305px;
+    div ul li{
+        list-style: none;
+    }
+   
+    div ul li a{
+        @include hamburger-style-menu;
+        color: $fourth-color;
+    }
+
+
+    .menu-toggle {
+        align-items: center;
+        display: flex;
+    }
+
+    div > a{
+        @include hamburger-style-menu;
+        color: $third-color;
+
+        &:focus{
+            color: $fourth-color;
+        }
+    }
 }
 
 
-.menu div > a{
-    @include hamburger-style-menu;
-    color: $third-color
-}
-.menu div > a:focus{
-    color: $fourth-color;
-}
 
-.menu div ul li{
-    list-style: none
-}
-.menu div ul li a{
-    @include hamburger-style-menu;
-    color: $fourth-color;
-}
+
+
+
 
 
 .menu div{
@@ -187,10 +195,7 @@ header .close-icon{
 main{
     text-align: center;
 }
-main .segment-1 div img{
-    width: 100% ;
 
-}
 
 main .segment-3{
     display: flex;
@@ -202,7 +207,14 @@ main .segment-3 img{
     margin-bottom: $margin-bottom-2;
 
 }
-
+main .segment-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+}
+main .segment-1 div:nth-child(2) img{
+    margin: 0 auto;
+}
 
 main .segment-1 div:nth-child(2),
 main .segment-1 div:nth-child(3),
@@ -214,8 +226,8 @@ main .segment-3 div{
     margin-bottom: $margin-bottom-2;
 }
 
-main .segment-1 div:nth-child(3) p{
-    padding-bottom: 160px
+main .segment-1 div:nth-child(4) p{
+    padding-bottom: 180px
 }
 
 main section div h2{
@@ -223,10 +235,13 @@ main section div h2{
     margin-bottom: $margin-bottom-3;
 }
 
-main section div h3{
+main section div h3,
+main section h3{
     @include main-style-h3;
     margin-bottom: $margin-bottom-3;
 }
+
+
 
 main section div p{
     @include main-style-paragraph
@@ -240,18 +255,29 @@ main section div{
     margin-bottom: $margin-bottom-2;
 }
 
+.invisible-none{
+    display: none;
+}
+
+main .segment .desktop{
+    display: none;
+}
+
 main .segment-2{
     background-color: $fifth-color;
     border-radius: 0px 100px 0px 100px;
     padding: $global-side-gap;
-    background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1, $gradient-main-color-2);
-    background-position: 50% 115%;
+    background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1 50%, $gradient-main-color-2);
+    background-color: $gradient-main-color-2;
+    background-position-x: 50%;
+    background-position-y: -230px ;
     background-size: cover;
-    height: 560px;
+    background-repeat: no-repeat;
+    height: 590px;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 160px;
+    padding-top: 145px;
 }
 
 main .segment-2 div h2{
@@ -260,7 +286,14 @@ main .segment-2 div h2{
 main .segment-2 div h2,
 main .segment-2 div p{
     color: $light-font-color;
+
 }
+main .segment-2 div p{
+    line-height: $global-paragraph-line-height;
+}
+
+
+
 
 main .segment-2 img{
    position: absolute;
@@ -303,3 +336,217 @@ footer div ul li a:active{
 }
 
 
+@media only screen and (min-width: 940px){
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header{
+        background: url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, $gradient-header-color-1, $gradient-header-color-2);
+        border-radius: 0px 0px 0px 100px;
+        background-repeat: no-repeat;
+        background-position: 20% 50%;
+        height: 100vh;
+        margin-bottom: $margin-bottom-1;
+        padding-top: 0;
+        padding: $global-desktop-side-gap;
+        
+    }
+    .navbar {
+    display: flex;
+    position: static;
+    margin: 0;
+    justify-content: space-between;
+    padding-top: 35px;
+    align-items: center;
+    
+    }
+
+    header .navbar > div{
+        display: block;
+    }
+    
+    .menu div:nth-child(1) > a,
+    .menu div:nth-child(2) > a,
+    .menu div:nth-child(3) > a,
+    .navbar nav div:nth-child(1) img,
+    .navbar nav div:nth-child(2) img,
+    .navbar nav div:nth-child(3) img,
+    .productOptions,
+    .companyOptions,
+    .connectOptions{
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        right: calc(100vw - 950px);
+        padding-left: 35px;
+    }
+
+  
+    
+    .navbar nav div:nth-child(1) img,
+    .navbar nav div:nth-child(2) img,
+    .navbar nav div:nth-child(3) img{
+        padding-left: 10px;
+        color: white !important;
+    }
+
+    .menu div:nth-child(3){
+        border: 0;
+    }
+
+    .menu{
+    display: flex;
+    background-color: transparent;
+    box-shadow: 0 0 0;
+    position: static;
+    transform: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 620px;
+    }
+    .menu div > div{
+        flex-direction: row;
+    }
+    .menu div{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu div:last-child{
+        display: flex;
+        flex-direction: row;
+    }
+    .menu div:last-child a {
+        padding: 10px 20px;
+
+    }
+    .menu div:last-child a:last-child{
+        color: $first-color;
+        background: white !important;
+    }
+    .menu div{
+        margin: 0;
+        padding: 0 !important;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .menu div > a{
+        color: white;
+    }
+    .menu div > a:active{
+        text-decoration: underline;
+
+    }
+    .menu div ul li a{
+        font-weight: 500;
+    }
+    .menu div ul li a:active{
+        font-weight: bolder;
+        color: black;
+    }
+    .menu div a img{
+       padding-left: 20px;
+    }
+    .productOptions,
+    .companyOptions,
+    .connectOptions {
+    padding: 20px 20px;
+    background-color: white;
+    position: absolute;
+    width: 150px;
+    }
+    .menu div ul li{
+        text-align: left;
+    }
+    .productOptions li:first-child,
+    .companyOptions li:first-child,
+    .connectOptions li:first-child{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .productOptions li:last-child,
+    .companyOptions li:last-child,
+    .connectOptions li:last-child{
+        padding-bottom: 0;
+    }
+    
+    .productOptions,
+    .companyOptions,
+    .connectOptions{
+        top: 80px;
+    }
+    .productOptions{
+        transform: translateX(-550px);
+    }
+    .companyOptions{
+        transform: translateX(-435px);
+    }
+    .connectOptions{
+        transform: translateX(-310px);
+    }
+
+    main .segment-1 div:nth-child(4) p{
+        padding: 0px !important
+    }
+    header div .arrow-dark{
+        display: none;
+    }
+    header div .arrow-light{
+        display: block;
+    }
+    .menu div a:focus{
+        color: white;
+    }
+    main .segment .desktop{
+        display: block;
+    }
+    main .segment .mobile{
+        display: none !important;
+    }
+
+    .segment-1{
+        display: grid !important;
+        margin-bottom: 500px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 150px 250px 250px;
+        text-align: left;
+        grid-template-areas:
+        "heading heading"
+        "paragraph1 img"
+        "paragraph2 img";
+        
+    }
+    .segment-1 div:nth-child(1){
+        grid-area: heading;
+        text-align: center !important;
+        width: 100vw;
+    }
+    .segment-1 div:nth-child(2){
+        grid-area: img;
+    }
+    .segment-1 div:nth-child(2) img{
+        width: 175%;
+        padding-right: $global-desktop-side-gap-one-sided;
+    }
+    .segment-1 div:nth-child(3){
+        grid-area: paragraph1;
+        margin-left: $global-desktop-side-gap-one-sided !important;
+        margin: 0;
+    }
+    .segment-1 div:nth-child(4){
+        grid-area: paragraph2;
+        margin-left: $global-desktop-side-gap-one-sided;
+
+    }
+    main .segment-1 div:nth-child(4) p{
+        padding: 0px;
+    }
+
+    
+}
