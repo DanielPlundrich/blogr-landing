@@ -11,7 +11,7 @@ body{
     margin: auto;
 }
 header{
-    background: url(/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, $gradient-header-color-1, $gradient-header-color-2);
+    background: url(images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom, $gradient-header-color-1, $gradient-header-color-2);
     border-radius: 0px 0px 0px 100px;
     background-repeat: no-repeat;
     background-position: 40% 30%;
@@ -149,13 +149,13 @@ header{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
     font-family:'Overpass';
     
 }
 
 .header-content div h1{
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: $light-font-color;
     margin-bottom: 15px;
     font-weight: 600;
@@ -264,10 +264,9 @@ main .segment .desktop{
 }
 
 main .segment-2{
-    background-color: $fifth-color;
     border-radius: 0px 100px 0px 100px;
     padding: $global-side-gap;
-    background: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1 50%, $gradient-main-color-2);
+    background: url(images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1 50%, $gradient-main-color-2);
     background-color: $gradient-main-color-2;
     background-position-x: 50%;
     background-position-y: -230px ;
@@ -342,7 +341,7 @@ footer div ul li a:active{
         overflow-x: hidden;
     }
     header{
-        background: url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, $gradient-header-color-1, $gradient-header-color-2);
+        background: url(images/bg-pattern-intro-desktop.svg), linear-gradient(to right, $gradient-header-color-1, $gradient-header-color-2);
         border-radius: 0px 0px 0px 100px;
         background-repeat: no-repeat;
         background-position: 20% 50%;
@@ -512,7 +511,8 @@ footer div ul li a:active{
 
     .segment-1{
         display: grid !important;
-        margin-bottom: 500px;
+        margin-bottom: 350px;
+        margin-top: 100px;
         grid-template-columns: 50% 50%;
         grid-template-rows: 150px 250px 250px;
         text-align: left;
@@ -529,15 +529,22 @@ footer div ul li a:active{
     }
     .segment-1 div:nth-child(2){
         grid-area: img;
+        padding-top: 100px;
+    }
+
+    .segment-1 div:nth-child(1) h3{
+        font-size: 2.5rem;
     }
     .segment-1 div:nth-child(2) img{
-        width: 175%;
+        width: 160%;
         padding-right: $global-desktop-side-gap-one-sided;
+
     }
     .segment-1 div:nth-child(3){
         grid-area: paragraph1;
         margin-left: $global-desktop-side-gap-one-sided !important;
         margin: 0;
+        padding-top: 100px;
     }
     .segment-1 div:nth-child(4){
         grid-area: paragraph2;
@@ -548,5 +555,26 @@ footer div ul li a:active{
         padding: 0px;
     }
 
-    
+    main .segment-2 img{
+        width: calc(40vw - 5%);
+        left: 25%;
+        top: -80px;
+    }
+
+    main .segment-2 div{
+        text-align: left;
+        padding-left: 40%;
+        margin: $global-desktop-side-gap-one-sided;
+    }
+
+    main .segment-2{
+        background: url(images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
+        background-color: hsl(237, 23%, 32%);
+        height: 350px;
+        background-position-x: -220px;
+        background-position-y: 80%;
+        background-size: none;
+        background-repeat: no-repeat;
+        padding: 0;
+    }
 }
