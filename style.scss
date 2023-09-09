@@ -74,13 +74,6 @@ header{
     }
 }
 
-
-
-
-
-
-
-
 .menu div{
     margin-bottom: 20px;
     margin: 25px ;
@@ -100,8 +93,6 @@ header{
     border-radius: 5px;
     
 }
-
-
 .menu div:nth-child(3){
     border-bottom: 2px solid rgba(168, 168, 168, 0.195);;
     padding-bottom: 30px;
@@ -141,21 +132,18 @@ header{
     color: white;
 }
 
-
-
-
 .header-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 140px;
     font-family:'Overpass';
-    
+
 }
 
 .header-content div h1{
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: $light-font-color;
     margin-bottom: 15px;
     font-weight: 600;
@@ -498,6 +486,13 @@ footer div ul li a:active{
     }
     header div .arrow-light{
         display: block;
+    }
+
+    .header-content{
+        margin-top: 200px;
+    }
+    .header-content div h1{
+        font-size: 3.5rem;
     }
     .menu div a:focus{
         color: white;
