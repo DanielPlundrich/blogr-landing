@@ -193,6 +193,12 @@ main .segment-3 img {
   margin-bottom: 30px;
 }
 
+main .segment-3 div:nth-child(1) {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
 main .segment-1 {
   display: flex;
   flex-direction: column;
@@ -307,6 +313,10 @@ footer div ul li {
   margin-bottom: 10px;
 }
 
+footer div ul li:last-child {
+  margin-bottom: 0;
+}
+
 footer div h4 {
   color: white;
   font-family: "Ubuntu";
@@ -325,10 +335,16 @@ footer div ul li a:active {
   text-decoration: underline;
 }
 
+.attribution {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .attribution,
 .attribution a {
   color: white;
-  padding: 25px 0;
+  text-align: center;
+  background-color: hsl(240, 10%, 16%);
 }
 
 @media only screen and (min-width: 940px) {
@@ -340,18 +356,18 @@ footer div ul li a:active {
     background: url(images/bg-pattern-intro-desktop.svg), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     border-radius: 0px 0px 0px 100px;
     background-repeat: no-repeat;
-    background-position: 20% 50%;
-    height: 100vh;
+    background-position: 21% 55%;
+    height: 75vh;
     margin-bottom: 60px;
     padding-top: 0;
-    padding: 0 100px;
+    padding: 0 150px;
   }
   .navbar {
     display: flex;
     position: static;
     margin: 0;
     justify-content: space-between;
-    padding-top: 35px;
+    padding-top: 50px;
     align-items: center;
   }
   header .navbar > div {
@@ -369,7 +385,7 @@ footer div ul li a:active {
     text-align: center;
     justify-content: center;
     position: relative;
-    right: calc(100vw - 950px);
+    right: calc(100vw - 1100px);
     padding-left: 35px;
   }
   .navbar nav div:nth-child(1) img,
@@ -380,6 +396,11 @@ footer div ul li a:active {
   }
   .menu div:nth-child(3) {
     border: 0;
+  }
+  main .segment-1 div:nth-child(2),
+  main .segment-1 div:nth-child(3),
+  main .segment-3 div {
+    margin: 0;
   }
   .menu {
     display: flex;
@@ -462,16 +483,16 @@ footer div ul li a:active {
   .productOptions,
   .companyOptions,
   .connectOptions {
-    top: 80px;
+    top: 100px;
   }
   .productOptions {
-    transform: translateX(-550px);
+    transform: translateX(-600px);
   }
   .companyOptions {
-    transform: translateX(-435px);
+    transform: translateX(-485px);
   }
   .connectOptions {
-    transform: translateX(-310px);
+    transform: translateX(-360px);
   }
   main .segment-1 div:nth-child(4) p {
     padding: 0px !important;
@@ -483,7 +504,7 @@ footer div ul li a:active {
     display: block;
   }
   .header-content {
-    margin-top: 200px;
+    margin-top: 120px;
   }
   .header-content div h1 {
     font-size: 3.5rem;
@@ -499,11 +520,12 @@ footer div ul li a:active {
   }
   .segment-1 {
     display: grid !important;
-    margin-bottom: 350px;
+    margin-bottom: 200px;
     margin-top: 100px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 150px 250px 250px;
+    grid-template-rows: 150px 350px 350px;
     text-align: left;
+    align-items: center;
     grid-template-areas: "heading heading" "paragraph1 img" "paragraph2 img";
   }
   .segment-1 div:nth-child(1) {
@@ -513,46 +535,111 @@ footer div ul li a:active {
   }
   .segment-1 div:nth-child(2) {
     grid-area: img;
-    padding-top: 100px;
+    right: -8%;
+    position: relative;
+    margin: 0;
+  }
+  .segment-1 div:nth-child(2) img {
+    width: 130%;
   }
   .segment-1 div:nth-child(1) h3 {
     font-size: 2.5rem;
   }
-  .segment-1 div:nth-child(2) img {
-    width: 160%;
-    padding-right: 100px;
-  }
   .segment-1 div:nth-child(3) {
     grid-area: paragraph1;
-    margin-left: 100px !important;
+    margin-left: 150px !important;
     margin: 0;
-    padding-top: 100px;
+  }
+  main .segment-1 div:nth-child(2) img {
+    margin: 0;
   }
   .segment-1 div:nth-child(4) {
     grid-area: paragraph2;
-    margin-left: 100px;
+    margin-left: 150px;
   }
   main .segment-1 div:nth-child(4) p {
     padding: 0px;
   }
   main .segment-2 img {
-    width: calc(40vw - 5%);
-    left: 25%;
-    top: -80px;
+    width: 90%;
+    left: 0;
+    top: 0;
+    position: relative;
+    transform: translateX(0);
+    align-items: center;
   }
-  main .segment-2 div {
+  main .segment-2 div:nth-child(1) {
     text-align: left;
-    padding-left: 40%;
-    margin: 100px;
+    margin-left: calc(150px - 6%);
+  }
+  main .segment-2 div:nth-child(2) {
+    text-align: left;
+    margin-right: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+  main section div h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
   }
   main .segment-2 {
     background: url(images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
     background-color: hsl(237, 23%, 32%);
-    height: 350px;
+    height: 450px;
     background-position-x: -220px;
     background-position-y: 80%;
     background-size: none;
     background-repeat: no-repeat;
     padding: 0;
+    margin-bottom: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px;
+  }
+  main section div {
+    margin-bottom: 0px;
+  }
+  main .segment-3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 250px 250px;
+    align-items: center;
+    text-align: left;
+    grid-template-areas: "img paragraph1" "img paragraph2";
+    margin-bottom: 300px;
+  }
+  .segment-3 div:nth-child(1) {
+    grid-area: img;
+    left: -22%;
+    position: relative;
+  }
+  main .segment-3 div img {
+    margin-bottom: 0;
+  }
+  .segment-3 div:nth-child(2) {
+    grid-area: paragraph1;
+    margin-right: 150px !important;
+  }
+  .segment-3 div:nth-child(3) {
+    grid-area: paragraph2;
+    margin-right: 150px !important;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 70px 150px 70px 150px;
+  }
+  footer div {
+    text-align: left;
+  }
+  footer div h4 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  footer div ul li {
+    margin-bottom: 15px;
+  }
+  .attribution {
+    padding-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
