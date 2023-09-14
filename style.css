@@ -68,15 +68,27 @@ header div .arrow-light {
 .menu div > a:focus {
   color: hsl(207, 13%, 34%);
 }
-
 .menu div {
   margin-bottom: 20px;
   margin: 25px;
 }
-
-.menu div a img {
-  height: 6px;
-  margin-left: 4px;
+.menu div:nth-child(3) {
+  border-bottom: 2px solid rgba(168, 168, 168, 0.195);
+  padding-bottom: 30px;
+}
+.menu div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.menu div:last-child a {
+  margin: 0px auto;
+  width: 130px;
+  padding: 15px 0px;
+}
+.menu div:last-child a:last-child {
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%)) !important;
+  border-radius: 100px;
+  color: white;
 }
 
 .productOptions,
@@ -88,46 +100,34 @@ header div .arrow-light {
   width: 260px;
   border-radius: 5px;
 }
-
-.menu div:nth-child(3) {
-  border-bottom: 2px solid rgba(168, 168, 168, 0.195);
-  padding-bottom: 30px;
-}
-
-.productOptions li,
-.companyOptions li,
-.connectOptions li {
-  padding: 10px 0;
-}
-
+.productOptions li:first-child,
+.productOptions li:first-child,
 .productOptions li:first-child,
 .companyOptions li:first-child,
+.companyOptions li:first-child,
+.companyOptions li:first-child,
+.connectOptions li:first-child,
+.connectOptions li:first-child,
 .connectOptions li:first-child {
   padding-top: 20px;
   margin-top: 20px;
 }
-
+.productOptions li:last-child,
+.productOptions li:last-child,
 .productOptions li:last-child,
 .companyOptions li:last-child,
+.companyOptions li:last-child,
+.companyOptions li:last-child,
+.connectOptions li:last-child,
+.connectOptions li:last-child,
 .connectOptions li:last-child {
   padding-bottom: 20px;
 }
 
-.menu div:last-child {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu div:last-child a {
-  margin: 0px auto;
-  width: 130px;
-  padding: 15px 0px;
-}
-
-.menu div:last-child a:last-child {
-  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%)) !important;
-  border-radius: 100px;
-  color: white;
+.menu .productOptions li,
+.companyOptions li,
+.connectOptions li {
+  padding: 10px 0;
 }
 
 .header-content {
@@ -135,22 +135,19 @@ header div .arrow-light {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 120px;
   font-family: "Overpass";
 }
-
 .header-content div h1 {
   font-size: 2rem;
   color: white;
   margin-bottom: 15px;
   font-weight: 600;
 }
-
 .header-content div p {
   color: white;
   margin-bottom: 50px;
 }
-
 .header-content div a {
   color: white;
   text-decoration: none;
@@ -161,18 +158,17 @@ header div .arrow-light {
   font-size: 1rem;
   font-family: "Ubuntu";
   border: 3px solid white;
+  width: 140px;
+  display: inline-block;
 }
-
 .header-content div a:first-child {
   background-color: white;
   color: hsl(356, 100%, 66%);
 }
-
 .header-content div a:first-child:active {
   background-color: hsl(355, 100%, 74%);
   color: white;
 }
-
 .header-content div a:last-child:active {
   background-color: white;
   color: hsl(355, 100%, 74%);
@@ -181,85 +177,31 @@ header div .arrow-light {
 main {
   text-align: center;
 }
-
-main .segment-3 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+main .segment .desktop {
+  display: none;
 }
-
-main .segment-3 img {
-  width: 130%;
-  margin-bottom: 30px;
-}
-
-main .segment-3 div:nth-child(1) {
-  align-items: center;
-  display: flex;
-  width: 100%;
-}
-
-main .segment-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center !important;
-}
-
-main .segment-1 div:nth-child(2) img {
-  margin: 0 auto;
-}
-
-main .segment-1 div:nth-child(2),
-main .segment-1 div:nth-child(3),
-main .segment-3 div {
-  margin: 0 35px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-
-main .segment-1 div:nth-child(4) p {
-  padding-bottom: 180px;
-}
-
-main section div h2 {
-  color: hsl(208, 49%, 24%);
-  font-family: "Overpass";
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-main section div h3,
-main section h3 {
-  color: hsl(208, 49%, 24%);
-  font-family: "Overpass";
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
 main section div p {
   color: hsl(207, 13%, 34%);
   font-family: "Overpass";
   line-height: 27px;
 }
-
 main section {
   margin-bottom: 60px;
 }
-
 main section div {
   margin-bottom: 30px;
 }
-
-.invisible-none {
-  display: none;
+main .segment-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
 }
-
-main .segment .desktop {
-  display: none;
+main .segment-1 div:nth-child(4) p {
+  padding-bottom: 180px;
 }
-
+main .segment-1 div:nth-child(2) img {
+  margin: 0 auto;
+}
 main .segment-2 {
   border-radius: 0px 100px 0px 100px;
   padding: 0 35px;
@@ -275,26 +217,58 @@ main .segment-2 {
   position: relative;
   padding-top: 145px;
 }
-
-main .segment-2 div h2 {
-  margin-bottom: 15px;
-}
-
-main .segment-2 div h2,
-main .segment-2 div p {
-  color: white;
-}
-
-main .segment-2 div p {
-  line-height: 27px;
-}
-
 main .segment-2 img {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
   width: 100%;
   top: -180px;
+}
+main .segment-2 div h2,
+main .segment-2 div p {
+  color: white;
+}
+main .segment-2 div h2 {
+  margin-bottom: 15px;
+}
+main .segment-2 div p {
+  line-height: 27px;
+}
+main section div h2 {
+  color: hsl(208, 49%, 24%);
+  font-family: "Overpass";
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+main .segment-3 img {
+  width: 130%;
+  margin-bottom: 30px;
+}
+main .segment-3 div:nth-child(1) {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+main .segment-3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main section div h3,
+main section h3 {
+  color: hsl(208, 49%, 24%);
+  font-family: "Overpass";
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+main .segment-1 div:nth-child(2),
+main .segment-1 div:nth-child(3),
+main .segment-3 div {
+  margin: 0 35px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
 footer {
@@ -303,20 +277,16 @@ footer {
   text-align: center;
   padding-top: 60px;
 }
-
 footer a img {
   margin-bottom: 20px;
 }
-
 footer div ul li {
   list-style: none;
   margin-bottom: 10px;
 }
-
 footer div ul li:last-child {
   margin-bottom: 0;
 }
-
 footer div h4 {
   color: white;
   font-family: "Ubuntu";
@@ -324,13 +294,11 @@ footer div h4 {
   margin-top: 40px;
   font-weight: 500;
 }
-
 footer div ul li a {
   color: hsl(240, 2%, 79%);
   font-family: "Ubuntu";
   text-decoration: none;
 }
-
 footer div ul li a:active {
   text-decoration: underline;
 }
@@ -439,9 +407,6 @@ footer div ul li a:active {
     margin: 0;
     padding: 0 !important;
   }
-  .menu-toggle {
-    display: none;
-  }
   .menu div > a {
     color: white;
   }
@@ -458,6 +423,18 @@ footer div ul li a:active {
   .menu div a img {
     padding-left: 20px;
   }
+  .menu div ul li {
+    text-align: left;
+  }
+  .menu .segment-1 div:nth-child(4) p {
+    padding: 0px !important;
+  }
+  .menu div a:focus {
+    color: white;
+  }
+  .menu-toggle {
+    display: none;
+  }
   .productOptions,
   .companyOptions,
   .connectOptions {
@@ -465,25 +442,30 @@ footer div ul li a:active {
     background-color: white;
     position: absolute;
     width: 150px;
-  }
-  .menu div ul li {
-    text-align: left;
+    top: 100px;
   }
   .productOptions li:first-child,
+  .productOptions li:first-child,
+  .productOptions li:first-child,
   .companyOptions li:first-child,
+  .companyOptions li:first-child,
+  .companyOptions li:first-child,
+  .connectOptions li:first-child,
+  .connectOptions li:first-child,
   .connectOptions li:first-child {
     padding-top: 0;
     margin-top: 0;
   }
   .productOptions li:last-child,
+  .productOptions li:last-child,
+  .productOptions li:last-child,
   .companyOptions li:last-child,
+  .companyOptions li:last-child,
+  .companyOptions li:last-child,
+  .connectOptions li:last-child,
+  .connectOptions li:last-child,
   .connectOptions li:last-child {
     padding-bottom: 0;
-  }
-  .productOptions,
-  .companyOptions,
-  .connectOptions {
-    top: 100px;
   }
   .productOptions {
     transform: translateX(-600px);
@@ -493,9 +475,6 @@ footer div ul li a:active {
   }
   .connectOptions {
     transform: translateX(-360px);
-  }
-  main .segment-1 div:nth-child(4) p {
-    padding: 0px !important;
   }
   header div .arrow-dark {
     display: none;
@@ -509,14 +488,18 @@ footer div ul li a:active {
   .header-content div h1 {
     font-size: 3.5rem;
   }
-  .menu div a:focus {
-    color: white;
-  }
   main .segment .desktop {
     display: block;
   }
   main .segment .mobile {
     display: none !important;
+  }
+  main section div {
+    margin-bottom: 0px;
+  }
+  main section div h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
   }
   .segment-1 {
     display: grid !important;
@@ -550,37 +533,15 @@ footer div ul li a:active {
     margin-left: 150px !important;
     margin: 0;
   }
-  main .segment-1 div:nth-child(2) img {
+  .segment-1 div:nth-child(2) img {
     margin: 0;
   }
   .segment-1 div:nth-child(4) {
     grid-area: paragraph2;
     margin-left: 150px;
   }
-  main .segment-1 div:nth-child(4) p {
+  .segment-1 .segment-1 div:nth-child(4) p {
     padding: 0px;
-  }
-  main .segment-2 img {
-    width: 90%;
-    left: 0;
-    top: 0;
-    position: relative;
-    transform: translateX(0);
-    align-items: center;
-  }
-  main .segment-2 div:nth-child(1) {
-    text-align: left;
-    margin-left: calc(150px - 6%);
-  }
-  main .segment-2 div:nth-child(2) {
-    text-align: left;
-    margin-right: 150px;
-    justify-content: center;
-    align-items: center;
-  }
-  main section div h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
   }
   main .segment-2 {
     background: url(images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
@@ -596,8 +557,23 @@ footer div ul li a:active {
     grid-template-columns: 50% 50%;
     grid-template-rows: 450px;
   }
-  main section div {
-    margin-bottom: 0px;
+  main .segment-2 img {
+    width: 90%;
+    left: 0;
+    top: 0;
+    position: relative;
+    transform: translateX(0);
+    align-items: center;
+  }
+  main .segment-2 div:nth-child(2) {
+    text-align: left;
+    margin-right: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .segment-2 div:nth-child(1) {
+    text-align: left;
+    margin-left: calc(150px - 6%);
   }
   main .segment-3 {
     display: grid;
@@ -608,7 +584,7 @@ footer div ul li a:active {
     grid-template-areas: "img paragraph1" "img paragraph2";
     margin-bottom: 300px;
   }
-  .segment-3 div:nth-child(1) {
+  main .segment-3 div:nth-child(1) {
     grid-area: img;
     left: -22%;
     position: relative;
@@ -616,11 +592,11 @@ footer div ul li a:active {
   main .segment-3 div img {
     margin-bottom: 0;
   }
-  .segment-3 div:nth-child(2) {
+  main .segment-3 div:nth-child(2) {
     grid-area: paragraph1;
     margin-right: 150px !important;
   }
-  .segment-3 div:nth-child(3) {
+  main .segment-3 div:nth-child(3) {
     grid-area: paragraph2;
     margin-right: 150px !important;
   }

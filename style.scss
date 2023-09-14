@@ -52,12 +52,11 @@ header{
     div ul li{
         list-style: none;
     }
-   
+
     div ul li a{
         @include hamburger-style-menu;
         color: $fourth-color;
     }
-
 
     .menu-toggle {
         align-items: center;
@@ -72,17 +71,31 @@ header{
             color: $fourth-color;
         }
     }
+    div{
+        margin-bottom: 20px;
+        margin: 25px ;
+    }
+
+    div:nth-child(3){
+        border-bottom: 2px solid rgba(168, 168, 168, 0.195);;
+        padding-bottom: 30px;
+    }
+    div:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+    div:last-child a{
+        margin: 0px auto;
+        width: 130px;
+        padding: 15px 0px;
+    }
+    div:last-child a:last-child{
+        background: linear-gradient(to right, $gradient-header-color-1, $gradient-header-color-2) !important;
+        border-radius: 100px;
+        color: white;
+    }
 }
 
-.menu div{
-    margin-bottom: 20px;
-    margin: 25px ;
-}
-
-.menu div a img{
-    height: 6px;
-    margin-left: 4px;
-}
 .productOptions,
 .companyOptions,
 .connectOptions{
@@ -91,45 +104,25 @@ header{
     margin: 0 auto;
     width: 260px;
     border-radius: 5px;
-    
+
+    li:first-child,
+    li:first-child,
+    li:first-child{
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    li:last-child,
+    li:last-child,
+    li:last-child{
+        padding-bottom: 20px;
+    }
 }
-.menu div:nth-child(3){
-    border-bottom: 2px solid rgba(168, 168, 168, 0.195);;
-    padding-bottom: 30px;
-}
+
+.menu
 .productOptions li,
 .companyOptions li,
 .connectOptions li{
     padding: 10px 0;
-}
-.productOptions li:first-child,
-.companyOptions li:first-child,
-.connectOptions li:first-child{
-    padding-top: 20px;
-    margin-top: 20px;
-}
-
-.productOptions li:last-child,
-.companyOptions li:last-child,
-.connectOptions li:last-child{
-    padding-bottom: 20px;
-}
-
-
-
-.menu div:last-child{
-    display: flex;
-    flex-direction: column;
-}
-.menu div:last-child a{
-    margin: 0px auto;
-    width: 130px;
-    padding: 15px 0px;
-}
-.menu div:last-child a:last-child{
-    background: linear-gradient(to right, $gradient-header-color-1, $gradient-header-color-2) !important;
-    border-radius: 100px;
-    color: white;
 }
 
 .header-content{
@@ -137,200 +130,195 @@ header{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 120px;
     font-family:'Overpass';
 
-}
+    div h1{
+        font-size: 2rem;
+        color: $light-font-color;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
 
-.header-content div h1{
-    font-size: 2rem;
-    color: $light-font-color;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
+    div p{
+        color: $light-font-color;
+        margin-bottom: 50px;
+    }
 
-.header-content div p{
-    color: $light-font-color;
-    margin-bottom: 50px;
-}
+    div a{
+        color: $light-font-color;
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 15px 15px;
+        font-weight: 600;
+        border-radius: 40px;
+        font-size: 1rem;
+        font-family: 'Ubuntu';
+        border: 3px solid white;
+        width: 140px;
+        display: inline-block;
+    }
 
-.header-content div a{
-    color: $light-font-color;
-    text-decoration: none;
-    margin: 0 5px;
-    padding: 15px 15px;
-    font-weight: 600;
-    border-radius: 40px;
-    font-size: 1rem;
-    font-family: 'Ubuntu';
-    border: 3px solid white;
-}
+    div a:first-child{
+        background-color: white;
+        color: $first-color;
+    }
 
-.header-content div a:first-child{
-    background-color: white;
-    color: $first-color;
-}
-.header-content div a:first-child:active{
-    background-color: $second-color;
-    color: white;
-}
+    div a:first-child:active{
+        background-color: $second-color;
+        color: white;
+    }
 
-.header-content div a:last-child:active{
-    background-color: white;
-    color: $second-color;
+    div a:last-child:active{
+        background-color: white;
+        color: $second-color;
+    }
 }
 
 main{
     text-align: center;
+
+    .segment .desktop{
+        display: none;
+    }
+
+    section div p{
+        @include main-style-paragraph
+    }
+
+    section{
+        margin-bottom: $margin-bottom-1;
+    }
+
+    section div{
+        margin-bottom: $margin-bottom-2;
+    }
+
+    .segment-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .segment-1 div:nth-child(4) p{
+        padding-bottom: 180px
+    }
+
+    .segment-1 div:nth-child(2) img{
+        margin: 0 auto;
+    }
+
+    .segment-2{
+        border-radius: 0px 100px 0px 100px;
+        padding: $global-side-gap;
+        background: url(images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1 50%, $gradient-main-color-2);
+        background-color: $gradient-main-color-2;
+        background-position-x: 50%;
+        background-position-y: -230px ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 590px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-top: 145px;
+    }
+
+    .segment-2 img{
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 100%;
+        top: -180px;
+    }
+    .segment-2 div h2,
+    .segment-2 div p{
+        color: $light-font-color;
+
+    }
+    .segment-2 div h2{
+        margin-bottom: $margin-bottom-3;
+    }
+
+    .segment-2 div p{
+        line-height: $global-paragraph-line-height;
+    }
+
+    section div h2{
+        @include main-style-h2;
+        margin-bottom: $margin-bottom-3;
+    }
+
+    .segment-3 img{
+        width: 130%;
+        margin-bottom: $margin-bottom-2;
+    }
+
+    .segment-3 div:nth-child(1){
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+
+    .segment-3{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section div h3,
+    section h3{
+        @include main-style-h3;
+        margin-bottom: $margin-bottom-3;
+    }
+    .segment-1 div:nth-child(2),
+    .segment-1 div:nth-child(3),
+    .segment-3 div{
+        margin: $global-side-gap;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: $margin-bottom-2;
+    }
 }
 
-
-main .segment-3{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-main .segment-3 img{
-    width: 130%;
-    margin-bottom: $margin-bottom-2;
-    
-}
-
-main .segment-3 div:nth-child(1){
-    align-items: center;
-    display: flex;
-    width: 100%;
-}
-
-main .segment-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center !important;
-}
-main .segment-1 div:nth-child(2) img{
-    margin: 0 auto;
-}
-
-main .segment-1 div:nth-child(2),
-main .segment-1 div:nth-child(3),
-main .segment-3 div{
-    margin: $global-side-gap;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: $margin-bottom-2;
-}
-
-main .segment-1 div:nth-child(4) p{
-    padding-bottom: 180px
-}
-
-main section div h2{
-    @include main-style-h2;
-    margin-bottom: $margin-bottom-3;
-}
-
-main section div h3,
-main section h3{
-    @include main-style-h3;
-    margin-bottom: $margin-bottom-3;
-}
-
-
-
-main section div p{
-    @include main-style-paragraph
-}
-
-main section{
-    margin-bottom: $margin-bottom-1;
-}
-
-main section div{
-    margin-bottom: $margin-bottom-2;
-}
-
-.invisible-none{
-    display: none;
-}
-
-main .segment .desktop{
-    display: none;
-}
-
-main .segment-2{
-    border-radius: 0px 100px 0px 100px;
-    padding: $global-side-gap;
-    background: url(images/bg-pattern-circles.svg), linear-gradient(to bottom, $gradient-main-color-1 50%, $gradient-main-color-2);
-    background-color: $gradient-main-color-2;
-    background-position-x: 50%;
-    background-position-y: -230px ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 590px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-top: 145px;
-}
-
-main .segment-2 div h2{
-    margin-bottom: $margin-bottom-3;
-}
-main .segment-2 div h2,
-main .segment-2 div p{
-    color: $light-font-color;
-
-}
-main .segment-2 div p{
-    line-height: $global-paragraph-line-height;
-}
-
-
-
-
-main .segment-2 img{
-   position: absolute;
-   transform: translateX(-50%);
-   left: 50%;
-   width: 100%;
-   top: -180px;
-}
 
 footer {
     background-color: $sixth-color;
     border-radius: 0px 100px 0px 0px;
     text-align: center;
     padding-top: 60px;
-}
-footer a img {
-    margin-bottom: 20px;
-}
-footer div ul li{
-    list-style: none;
-    margin-bottom: 10px;
-    
-}
-footer div ul li:last-child{
-    margin-bottom: 0
-}
-footer div h4 {
-    @include footer-style-h4
-}
 
+    a img {
+        margin-bottom: 20px;
+    }
 
-footer div ul li a{
-    @include footer-style-menu;
-}
+    div ul li{
+        list-style: none;
+        margin-bottom: 10px;
+    }
 
-footer div ul li a:active{
-    text-decoration: underline;
+    div ul li:last-child{
+        margin-bottom: 0
+    }
+
+    div h4 {
+        @include footer-style-h4
+    }
+
+    div ul li a{
+        @include footer-style-menu;
+    }
+
+    div ul li a:active{
+        text-decoration: underline;
+    }
 }
 
 .attribution{
     padding-top: 30px;
     padding-bottom: 30px;
-    
+
 }
 .attribution,
 .attribution a {
@@ -354,7 +342,6 @@ footer div ul li a:active{
         margin-bottom: $margin-bottom-1;
         padding-top: 0;
         padding: $global-desktop-side-gap;
-        
     }
     .navbar {
     display: flex;
@@ -386,8 +373,6 @@ footer div ul li a:active{
         padding-left: 35px;
     }
 
-  
-    
     .navbar nav div:nth-child(1) img,
     .navbar nav div:nth-child(2) img,
     .navbar nav div:nth-child(3) img{
@@ -404,63 +389,87 @@ footer div ul li a:active{
         margin: 0;
     }
     .menu{
-    display: flex;
-    background-color: transparent;
-    box-shadow: 0 0 0;
-    position: static;
-    transform: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    width: 620px;
-    }
-    .menu div > div{
-        flex-direction: row;
-    }
-    .menu div{
+        display: flex;
+        background-color: transparent;
+        box-shadow: 0 0 0;
+        position: static;
+        transform: none;
         text-align: center;
         justify-content: center;
         align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .menu div:last-child{
-        display: flex;
-        flex-direction: row;
-    }
-    .menu div:last-child a {
-        padding: 10px 20px;
+        margin-top: 0;
+        width: 620px;
 
+        div > div{
+            flex-direction: row;
+        }
+
+        div{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div:last-child{
+            display: flex;
+            flex-direction: row;
+        }
+
+        div:last-child a {
+            padding: 10px 20px;
+    
+        }
+
+        div:last-child a:last-child{
+            color: $first-color;
+            background: white !important;
+        }
+
+        div{
+            margin: 0;
+            padding: 0 !important;
+        }
+        div > a{
+            color: white;
+
+            &:active{
+                text-decoration: underline;
+        
+            }
+        }
+
+        div ul li a{
+            font-weight: 500;
+        }
+
+        div ul li a:active{
+            font-weight: bolder;
+            color: black;
+        }
+
+        div a img{
+            padding-left: 20px;
+         }
+
+        div ul li{
+            text-align: left;
+        }
+
+        .segment-1 div:nth-child(4) p{
+            padding: 0px !important
+        }
     }
-    .menu div:last-child a:last-child{
-        color: $first-color;
-        background: white !important;
+
+    .menu div a:focus{
+        color: white;
     }
-    .menu div{
-        margin: 0;
-        padding: 0 !important;
-    }
+
     .menu-toggle{
         display: none;
     }
-    .menu div > a{
-        color: white;
-    }
-    .menu div > a:active{
-        text-decoration: underline;
 
-    }
-    .menu div ul li a{
-        font-weight: 500;
-    }
-    .menu div ul li a:active{
-        font-weight: bolder;
-        color: black;
-    }
-    .menu div a img{
-       padding-left: 20px;
-    }
     .productOptions,
     .companyOptions,
     .connectOptions {
@@ -468,27 +477,23 @@ footer div ul li a:active{
     background-color: white;
     position: absolute;
     width: 150px;
+    top: 100px;
+
+        li:first-child,
+        li:first-child,
+        li:first-child{
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        li:last-child,
+        li:last-child,
+        li:last-child{
+           padding-bottom: 0;
+       }
     }
-    .menu div ul li{
-        text-align: left;
-    }
-    .productOptions li:first-child,
-    .companyOptions li:first-child,
-    .connectOptions li:first-child{
-        padding-top: 0;
-        margin-top: 0;
-    }
-    .productOptions li:last-child,
-    .companyOptions li:last-child,
-    .connectOptions li:last-child{
-        padding-bottom: 0;
-    }
-    
-    .productOptions,
-    .companyOptions,
-    .connectOptions{
-        top: 100px;
-    }
+
+
     .productOptions{
         transform: translateX(-600px);
     }
@@ -498,10 +503,7 @@ footer div ul li a:active{
     .connectOptions{
         transform: translateX(-360px);
     }
-
-    main .segment-1 div:nth-child(4) p{
-        padding: 0px !important
-    }
+ 
     header div .arrow-dark{
         display: none;
     }
@@ -511,18 +513,26 @@ footer div ul li a:active{
 
     .header-content{
         margin-top: 120px;
+
+        div h1{
+            font-size: 3.5rem;
+        }
     }
-    .header-content div h1{
-        font-size: 3.5rem;
-    }
-    .menu div a:focus{
-        color: white;
-    }
+
     main .segment .desktop{
         display: block;
     }
     main .segment .mobile{
         display: none !important;
+    }
+
+    main section div {
+        margin-bottom: 0px;
+    }
+
+    main section div h2{
+        font-size: 2.5rem;
+        font-weight: 600;
     }
 
     .segment-1{
@@ -537,68 +547,47 @@ footer div ul li a:active{
         "heading heading"
         "paragraph1 img"
         "paragraph2 img";
-        
-    }
-    .segment-1 div:nth-child(1){
-        grid-area: heading;
-        text-align: center !important;
-        width: 100vw;
-    }
-    .segment-1 div:nth-child(2){
-        grid-area: img;
-        right: -8%;
-        position: relative;
-        margin: 0;
-    }
-    .segment-1 div:nth-child(2) img{
-        width: 130%;
-    }
-    .segment-1 div:nth-child(1) h3{
-        font-size: 2.5rem;
-    }
-    .segment-1 div:nth-child(3){
-        grid-area: paragraph1;
-        margin-left: $global-desktop-side-gap-one-sided !important;
-        margin: 0;
-    }
-    main .segment-1 div:nth-child(2) img{
-        margin: 0;
-    }
-    .segment-1 div:nth-child(4){
-        grid-area: paragraph2;
-        margin-left: $global-desktop-side-gap-one-sided;
 
-    }
-    main .segment-1 div:nth-child(4) p{
-        padding: 0px;
-    }
+        div:nth-child(1){
+            grid-area: heading;
+            text-align: center !important;
+            width: 100vw;
+        }
 
-    main .segment-2 img{
-        width: 90%;
-        left: 0;
-        top: 0;
-        position: relative;
-        transform: translateX(0);
-        align-items: center;
-    }
+        div:nth-child(2){
+            grid-area: img;
+            right: -8%;
+            position: relative;
+            margin: 0;
+        }
 
-    main .segment-2 div:nth-child(1){
-        text-align: left;
-        margin-left: calc($global-desktop-side-gap-one-sided - 6%);
-    }
+        div:nth-child(2) img{
+            width: 130%;
+        }
 
-    main .segment-2 div:nth-child(2){
-        text-align: left;
-        margin-right: $global-desktop-side-gap-one-sided;
-        justify-content: center;
-        align-items: center;
-    }
+        div:nth-child(1) h3{
+            font-size: 2.5rem;
+        }
 
-    main section div h2{
-        font-size: 2.5rem;
-        font-weight: 600;
-    }
+        div:nth-child(3){
+            grid-area: paragraph1;
+            margin-left: $global-desktop-side-gap-one-sided !important;
+            margin: 0;
+        }
 
+        div:nth-child(2) img{
+            margin: 0;
+        }
+
+        div:nth-child(4){
+            grid-area: paragraph2;
+            margin-left: $global-desktop-side-gap-one-sided;
+        }
+
+        .segment-1 div:nth-child(4) p{
+            padding: 0px;
+        }
+    }
 
     main .segment-2{
         background: url(images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
@@ -613,11 +602,29 @@ footer div ul li a:active{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 450px;
-    }
-    main section div {
-       margin-bottom: 0px;
-    }
 
+        img{
+            width: 90%;
+            left: 0;
+            top: 0;
+            position: relative;
+            transform: translateX(0);
+            align-items: center;
+        }
+
+        div:nth-child(2){
+            text-align: left;
+            margin-right: $global-desktop-side-gap-one-sided;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div:nth-child(1){
+            text-align: left;
+            margin-left: calc($global-desktop-side-gap-one-sided - 6%);
+        }
+    }
+   
     main .segment-3{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -628,43 +635,46 @@ footer div ul li a:active{
         "img paragraph1"
         "img paragraph2";
         margin-bottom: 300px;
-    }
 
-    .segment-3 div:nth-child(1){
-        grid-area: img;
-        left: -22%;
-        position: relative;
-    }
-    main .segment-3 div img{
-        margin-bottom: 0;
-    }
-    .segment-3 div:nth-child(2){
-        grid-area: paragraph1;
-        margin-right: $global-desktop-side-gap-one-sided !important;
-    }
+        div:nth-child(1){
+            grid-area: img;
+            left: -22%;
+            position: relative;
+        }
+        div img{
+            margin-bottom: 0;
+        }
 
-    .segment-3 div:nth-child(3){
-        grid-area: paragraph2;
-        margin-right: $global-desktop-side-gap-one-sided !important;
-    }
+        div:nth-child(2){
+            grid-area: paragraph1;
+            margin-right: $global-desktop-side-gap-one-sided !important;
+        }
 
+        div:nth-child(3){
+            grid-area: paragraph2;
+            margin-right: $global-desktop-side-gap-one-sided !important;
+        }
+    }
 
     footer{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        padding: 70px $global-desktop-side-gap-one-sided 70px $global-desktop-side-gap-one-sided
+        padding: 70px $global-desktop-side-gap-one-sided 70px $global-desktop-side-gap-one-sided;
+
+        div {
+            text-align: left;
+        }
+
+        div h4{
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        div ul li {
+            margin-bottom: 15px;
+        }
     }
 
-    footer div {
-        text-align: left;
-    }
-    footer div h4{
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-    footer div ul li {
-        margin-bottom: 15px;
-    }
     .attribution{
         padding-top: 0;
     }
